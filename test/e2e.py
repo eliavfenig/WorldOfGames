@@ -1,8 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from MainScores import url
 
-
+url = "http://127.0.0.1:5000"
 def test_scores_service():
     my_driver = webdriver.Chrome()
     my_driver.get(url)
