@@ -4,5 +4,5 @@ WORKDIR /app
 COPY MainScores.py /app
 COPY Utils.py /app
 COPY scores.txt /app
-COPY templates /app
+COPY templates /app/templates
 CMD ["python", "MainScores.py"]
