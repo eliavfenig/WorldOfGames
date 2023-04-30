@@ -17,7 +17,7 @@ pipeline {
 	  }
 	  stage('Run') {
 		steps {
-		  bat 'docker run -d -p 8777:5000 wog:v0.1'
+		  bat 'docker run -d -p 8777:5000 wog:v0.1 > 1.txt'
 		}
 	  }
 	  stage('Test') {
@@ -28,6 +28,7 @@ pipeline {
 	  }
 	  stage('Finalize') {
 		steps {
+		  powershell 'docker stop (cat .\1.txt)'
 		  bat 'docker push eliavfe/wog:latest'
 		}
 	  }
