@@ -1,10 +1,10 @@
 import os
-from Games.CurrencyRouletteGame import play_roulette
-from Games.GuessGame import play_guess
-from Games.MemoryGame import play_memory
-from Score.MainScores import app
-from Score.Score import add_score
-from Score.Utils import SCORES_FILE_NAME
+from CurrencyRouletteGame import play_roulette
+from GuessGame import play_guess
+from MemoryGame import play_memory
+from MainScores import app
+from Score import add_score
+from Utils import SCORES_FILE_NAME
 
 
 def welcome():

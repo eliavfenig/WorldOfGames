@@ -1,6 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from Score.MainScores import url
+from MainScores import url
 
 
 def test_scores_service():
