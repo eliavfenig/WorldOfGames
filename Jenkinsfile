@@ -29,7 +29,7 @@ pipeline {
 	  stage('Finalize') {
 		steps {
 		  powershell 'docker stop (cat a.txt)'
-		  bat 'docker push eliavfe/wog:latest'
+		  bat 'docker compose push'
 		}
 	  }
 	}
