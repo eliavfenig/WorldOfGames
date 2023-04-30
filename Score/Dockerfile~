@@ -1,0 +1,7 @@
+FROM python:latest
+RUN pip install flask
+WORKDIR /app
+COPY MainScores.py .
+COPY ../Util/Utils.py .
+COPY /Users/eliav/PycharmProjects/WorldOfGames/scores.txt .
+CMD ["python", "MainScores.py"]

@@ -1,7 +1,6 @@
 import random
 import time
-from Util.Utils import screen_cleaner
-import re
+from Score.Utils import screen_cleaner
 
 
 def generate_sequence(difficulty):

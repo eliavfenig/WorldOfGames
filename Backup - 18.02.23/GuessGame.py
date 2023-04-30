@@ -7,18 +7,14 @@ def generate_number(difficulty):
 
 
 def get_guess_from_user(difficulty):
-    while True:
-        user_guess = input(f"Please guess a number between 1 to {difficulty}: ")
-        if not user_guess.isdigit():
-            continue
-        user_guess = int(user_guess)
-        i = 0
-        while i < 1:
-            if user_guess >= 1 or user_guess <= int(difficulty):
-                i += 1
-            else:
-                print("the number you chose are not in the range, try again")
-        return int(user_guess)
+    user_guess = int(input(f"Please guess a number between 1 to {difficulty}"))
+    i = 0
+    while i < 1:
+        if user_guess >= 1 or user_guess <= int(difficulty):
+            i = i +1
+        else:
+            print("the number you chose are not in the range, try again")
+    return int(user_guess)
 
 
 def compare_guess_2_random(user_guess, secret):
@@ -26,7 +22,7 @@ def compare_guess_2_random(user_guess, secret):
         print("You won !!!")
         return True
     else:
-        print(f'You lost !!!\n the correct answer is: {secret}')
+        print("You lost !!!")
         return False
 
 

@@ -1,7 +1,5 @@
 import random
 import time
-from Utils import screen_cleaner
-import re
 
 
 def generate_sequence(difficulty):
@@ -9,14 +7,13 @@ def generate_sequence(difficulty):
     # line_clear = '\x1b[2k'
     print(random_list, end='')
     time.sleep(2)
-    screen_cleaner()
+    print('\r', end=' ')
     return random_list
 
 
 def get_list_from_user(difficulty):
     while True:
         user_list = input("enter the numbers you remember: ")
-        # if not re.search("\D+", user_list):
         user_list = user_list.split(',')
         user_list2 = []
         for i in user_list:

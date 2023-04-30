@@ -10,23 +10,21 @@ def get_money_interval(difficulty):
     dollar = random.randint(1, 100)
     nis = round((dollar * ils_rate), 2)
     difficulty = int(difficulty)
-    interval = (nis - (5 - difficulty), nis + (5 - difficulty))
-    return interval, dollar, nis
+    print(nis)
+    interval = (nis - (5 - difficulty), nis +(5 - difficulty))
+    return interval, dollar
 
 
 def get_guess_from_user(dollar):
-    user_guess = float(input(f'try to convert {dollar} dollars to ILS :'))
+    user_guess = float(input(f'try to convert {dollar} amount of dollar to ILS :'))
     return user_guess
 
 
 def play_roulette(difficulty):
-    interval, dollar, nis = get_money_interval(difficulty)
+    interval, dollar = get_money_interval(difficulty)
     user_guess = get_guess_from_user(dollar)
-    print(f'the correct answer is: {nis}')
     if interval[0] <= user_guess <= interval[1]:
         print(f'Congrats, you won the Currency game')
-        return True
     else:
         print("You lost the game")
-        return False
 

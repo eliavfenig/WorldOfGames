@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  wog:
+    build: .
+    image: eliavfe/wog
+    ports:
+      - "8081:5000"
+    environment:
+      - NGINX_PORT=80
+
