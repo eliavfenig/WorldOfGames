@@ -6,7 +6,7 @@ pipeline {
 	stages {
 	  stage('checkout') {
 		steps {
-		  git branch: 'wog-4.1',
+		  git branch: 'wog-level-4',
 			url: 'https://github.com/eliavfenig/WorldOfGames.git'
 		}
 	  }
