@@ -15,7 +15,7 @@ there are 3 seperate components in the project:
 
 ### Dependencies
 
-Python 3
+Python 3,
 Docker
 
 ### Installing
