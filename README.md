@@ -28,4 +28,4 @@ docker compose up
 ## Authors
 
 Eliav Fenig  
-linkedin.com/in/eliav-fenig-aa1113220
+https://linkedin.com/in/eliav-fenig-aa1113220
