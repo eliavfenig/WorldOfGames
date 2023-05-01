@@ -1,11 +1,10 @@
 import os
 from CurrencyRouletteGame import play_roulette
 from GuessGame import play_guess
-from MainScores import app
 from MemoryGame import play_memory
+from MainScores import app
 from Score import add_score
 from Utils import SCORES_FILE_NAME
-import webbrowser
 
 
 def welcome():
@@ -87,7 +86,7 @@ def load_game(name):
             game_over = input(f'Do you want to play another game ? (y/n) ')
             if game_over.lower() == "n":
                 app.run()
-                webbrowser.open('http://127.0.0.1:5000')
+                # webbrowser.open('http://127.0.0.1:5000')
                 os.remove(SCORES_FILE_NAME)
                 return
             elif game_over.lower() == "y":
