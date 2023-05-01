@@ -12,12 +12,12 @@ pipeline {
 	  }
 	  stage('Build') {
 		steps {
-		  bat 'docker build -t wog:v0.1 .'
+		  bat 'docker compose build'
 		}
 	  }
 	  stage('Run') {
 		steps {
-		  bat 'docker run -d -p 8777:5000 wog:v0.1 > a.txt'
+		  bat 'docker compose up'
 		}
 	  }
 	  stage('Test') {
@@ -28,7 +28,7 @@ pipeline {
 	  }
 	  stage('Finalize') {
 		steps {
-		  powershell 'docker stop (cat a.txt)'
+		  bat 'docker compose down'
 		  bat 'docker compose push'
 		}
 	  }
